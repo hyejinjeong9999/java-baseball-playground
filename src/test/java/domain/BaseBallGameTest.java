@@ -15,9 +15,9 @@ class BaseBallGameTest {
     }
 
     @Test
-    void STRIKE가_4면_옳은_정답이다() {
+    void STRIKE가_3이면_옳은_정답이다() {
         //given
-        baseBallGame.setSTRIKE_COUNT(4);
+        baseBallGame.setSTRIKE_COUNT(3);
         //when
         boolean result = baseBallGame.isCorrectAnswer();
         //then
@@ -25,7 +25,7 @@ class BaseBallGameTest {
     }
 
     @Test
-    void STRIKE가_4가_아니면_틀린_정답이다() {
+    void STRIKE가_3이_아니면_틀린_정답이다() {
         //given
         baseBallGame.setSTRIKE_COUNT(2);
         //when
@@ -63,7 +63,7 @@ class BaseBallGameTest {
         //given
         baseBallGame.setBALL_COUNT(2);
         baseBallGame.setSTRIKE_COUNT(0);
-        String expected = "1볼";
+        String expected = "2볼";
         //when
         String result = baseBallGame.printAnswerResult();
         //then
