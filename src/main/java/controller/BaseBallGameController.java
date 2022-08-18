@@ -1,17 +1,21 @@
 package controller;
 
+import domain.BaseBallGame;
+import service.BaseBallGameService;
+
 public class BaseBallGameController {
 
-    private void startGame(){
-        //게임 시작 (+랜덤값생성)
+    BaseBallGameService baseBallGameService;
 
-
-        //게임 서비스 시작
-
-
-        //재시작 물어보기
-
-
+    public BaseBallGameController(){
+        baseBallGameService = new BaseBallGameService();
+    }
+    public void game() {
+        boolean gameFlag = true;
+        while (gameFlag) {
+            BaseBallGame baseBallGame = new BaseBallGame();
+            gameFlag = baseBallGameService.playGame(baseBallGame);
+        }
     }
 
 }
