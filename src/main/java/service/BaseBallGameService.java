@@ -14,8 +14,8 @@ public class BaseBallGameService {
 
     public Boolean playGame(BaseBallGame baseBallGame) {
         Boolean isCorrectAnswer = false;
+        printMessage(START_GAME_MESSAGE);
         while (!isCorrectAnswer) {
-            printMessage(START_GAME_MESSAGE);
             inputUserAnswer();
             baseBallGame.checkAnswer(userAnswer);
             isCorrectAnswer = baseBallGame.isCorrectAnswer();
